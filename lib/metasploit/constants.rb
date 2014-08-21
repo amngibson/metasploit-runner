@@ -8,5 +8,6 @@ module CONSTANTS
   USING_DEFAULT_URI_MESSAGE = '[*] No URL specified in call, using /api/1.0 as default'
   SUCCESSFUL_CONNECTION_MESSAGE = '[*] Sucessfully authenticated to the Metasploit server'
   USING_DEFAULT_SSL_MESSAGE = '[*] Using SSL=TRUE'
+  REQUIRED_WORKSPACE_MESSAGE= 'PWNED! Workspace Name is required'
 
 end
