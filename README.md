@@ -34,9 +34,9 @@ Example:
 
 The if you do not pass the following options they will default to the respective values:
 
-port -> 3790
-uri -> /api/1.0
-use_ssl -> true
+       port -> 3790
+       uri -> /api/1.0
+       use_ssl -> true
 
 Example using the defaults:
 
