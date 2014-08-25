@@ -1,5 +1,11 @@
 language: ruby
 rvm:
-  - "2.1.2"
-# uncomment this line if your project needs to run something other than `rake`:
-# script: bundle exec rspec spec
+- 2.1.2
+deploy:
+  provider: rubygems
+  api_key:
+    secure: kwPTUQGR25urq/yKIFLcV2TjBalTGU5uWI+jK36I1fatvtbk6geL3BbpPuyiIQOvu2Kge6c5bEQpnOFNNeRW08G7vojhn1aFp7MtKLuE47jazbA1ekGh7Cvyt/actu9wensNAuew87IpJW9Fjxu+5B/RHz678nJqIA4zxFwL1TU=
+  gem: metasploit-runner
+  on:
+    tags: true
+    repo: amngibson/metasploit-runner
