@@ -3,6 +3,7 @@ module CONSTANTS
   DEFAULT_URI = '/api/1.0'
   DEFAULT_SSL = true
   RUNNING_IMPORT_STATUS = 'running'
+  EXPLOIT_RUNNING_MESSAGE = 'running'
   REQUIRED_TOKEN_MESSAGE = 'PWNED! Token is required'
   REQUIRED_CONNECTION_URL_MESSAGE = 'PWNED! Connection URL is required'
   REQUIRED_DEVICE_IP_TO_SCAN_MESSAGE = 'PWNED! Device IP to scan is required'
@@ -12,6 +13,7 @@ module CONSTANTS
   USING_DEFAULT_SSL_MESSAGE = '[*] Using SSL=TRUE'
   IMPORTING_DATA_MESSAGE = '[*] Importing...'
   SCANNING_MESSAGE = '[*] Scanning all your things...'
+  EXPLOIT_MESSAGE = '[*] Exploiting all your things...'
   REQUIRED_WORKSPACE_MESSAGE = 'PWNED! Workspace Name is required'
   SKIPPING_IMPORT_MESSAGE = '[*] Nexpose Console option was not passed, skipping Nexpose Import'
 
