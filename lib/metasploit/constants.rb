@@ -13,6 +13,7 @@ module CONSTANTS
   USING_DEFAULT_SSL_MESSAGE = '[*] Using SSL=TRUE'
   IMPORTING_DATA_MESSAGE = '[*] Importing scan data from Nexpose...'
   SCANNING_MESSAGE = '[*] Scanning all your things with WebScan...'
+  AUDIT_MESSAGE = '[*] Performing web audit...'
   EXPLOIT_MESSAGE = '[*] Exploiting all your things...'
   REQUIRED_WORKSPACE_MESSAGE = 'PWNED! Workspace Name is required'
   SKIPPING_IMPORT_MESSAGE = '[*] Nexpose Console option was not passed, skipping Nexpose Import'
