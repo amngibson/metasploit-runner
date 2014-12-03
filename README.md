@@ -39,12 +39,19 @@ Example WITHOUT Nexpose Console Integration:
 
     $ exploit "sploit.mydomain.com" "3790" "/api/1.0" "true" "asdlkjhsdfuw1228340asdasf8" "mycoolsoftware-build-28" "" "10.0.0.1"
 
+Additionally, a module filter may be passed in to determine which modules are whitelisted to run during an exploit.  The module filter parameter is a comma separate value
+for specifying multiple paths.
+
+Example WITH Module Filter:
+
+    $ exploit "sploit.mydomain.com" "3790" "/api/1.0" "true" "asdlkjhsdfuw1228340asdasf8" "mycoolsoftware-build-28" "nexpose-console-1" "10.0.0.1" "exploit/linux,exploit/multi"
 
 The if you do not pass the following options they will default to the respective values:
 
        port -> 3790
        uri -> /api/1.0
        use_ssl -> true
+       module_filter -> nil
 
 Example using the defaults:
 
