@@ -9,3 +9,5 @@ deploy:
   on:
     tags: true
     repo: amngibson/metasploit-runner
+  branches:
+    only: master

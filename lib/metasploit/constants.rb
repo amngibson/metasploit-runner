@@ -19,5 +19,5 @@ module CONSTANTS
   REQUIRED_WORKSPACE_MESSAGE = 'PWNED! Workspace Name is required'
   SKIPPING_IMPORT_MESSAGE = '[*] Nexpose Console option was not passed, skipping Nexpose Import'
   USING_OS_FILTER_MESSAGE = '[*] The OS Filter is set to TRUE so we are limiting the modules to just the ones applicable to this Operating System'
-
+  NO_OS_FILTER = '[*] We did not receive an option for the OS Filter or you set it to FALSE, either way we are backing the truck up and using all modules'
 end
