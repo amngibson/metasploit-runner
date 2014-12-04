@@ -2,6 +2,7 @@ module CONSTANTS
   DEFAULT_PORT = '3790'
   DEFAULT_URI = '/api/1.0'
   DEFAULT_SSL = true
+  DEFAULT_OS_FILTER = false
   RUNNING_IMPORT_STATUS = 'running'
   EXPLOIT_RUNNING_MESSAGE = 'running'
   REQUIRED_TOKEN_MESSAGE = 'PWNED! Token is required'
@@ -17,5 +18,6 @@ module CONSTANTS
   EXPLOIT_MESSAGE = '[*] Exploiting all your things...'
   REQUIRED_WORKSPACE_MESSAGE = 'PWNED! Workspace Name is required'
   SKIPPING_IMPORT_MESSAGE = '[*] Nexpose Console option was not passed, skipping Nexpose Import'
+  USING_OS_FILTER_MESSAGE = '[*] The OS Filter is set to TRUE so we are limiting the modules to just the ones applicable to this Operating System'
 
 end
