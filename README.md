@@ -29,15 +29,15 @@ This gem allows you to specify the Metasploit Connection URL, Metasploit Connect
 The nexpose_console_name is optional, if you specify a nexpose console name it will use the workspace_name, and nexpose console name to pull scan data from a nexpose console.
 IMPORTANT: Your "Site Name" in Nexpose, must match your "Workspace" name in Metasploit and you must add your Nexpose Console to Metasploit for this to work properly.
 
-    $ exploit "connection_url" "port" "uri" "use_ssl" "token" "workspace_name" "nexpose_console_name" "device_ip_to_scan" "os_filter"
+    $ exploit "connection_url" "port" "uri" "use_ssl" "token" "workspace_name" "nexpose_console_name" "device_ip_to_scan" "os_filter" "module_filter"
 
 Example WITH Nexpose Console Integration:
 
-    $ exploit "sploit.mydomain.com" "3790" "/api/1.0" "<true/false>" "asdlkjhsdfuw1228340asdasf8" "mycoolsoftware-build-28" "nexpose-console-1" "10.0.0.1" "<true/false>"
+    $ exploit "sploit.mydomain.com" "3790" "/api/1.0" "<true/false>" "asdlkjhsdfuw1228340asdasf8" "mycoolsoftware-build-28" "nexpose-console-1" "10.0.0.1" "<true/false>" "exploit/windows/smb/psexec"
 
 Example WITHOUT Nexpose Console Integration:
 
-    $ exploit "sploit.mydomain.com" "3790" "/api/1.0" "true" "asdlkjhsdfuw1228340asdasf8" "mycoolsoftware-build-28" "" "10.0.0.1" "false"
+    $ exploit "sploit.mydomain.com" "3790" "/api/1.0" "true" "asdlkjhsdfuw1228340asdasf8" "mycoolsoftware-build-28" "" "10.0.0.1" "false" "exploit/windows/smb/psexec"
 
 Additionally, an os filter may be passed in to determine which modules will be ran during an exploit.  The os filter parameter will default to false (all modules will run) if you do not pass a value.
 
@@ -56,7 +56,7 @@ The if you do not pass the following options they will default to the respective
 
 Example using the defaults:
 
-    $ exploit "sploit.mydomain.com" "" "" "" "asdlkjhsdfuw1228340asdasf8" "mycoolsoftware-build-28" "nexpose-console-1" "10.0.0.1" ""
+    $ exploit "sploit.mydomain.com" "" "" "" "asdlkjhsdfuw1228340asdasf8" "mycoolsoftware-build-28" "nexpose-console-1" "10.0.0.1" "" ""
 
 ## Contributing
 
