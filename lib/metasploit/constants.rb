@@ -23,4 +23,5 @@ module CONSTANTS
   NO_OS_FILTER = '[*] We did not receive an option for the OS Filter or you set it to FALSE, either way we are backing the truck up and using all modules'
   USING_MODULE_FILTER = '[*] Filtering exploits based on your desired modules'
   NO_MODULE_FILTER = '[*] Not filtering any modules'
+  NO_REPORT_TYPE_MESSAGE = 'No report type specified - skipping report generation'
 end
