@@ -21,3 +21,5 @@ tmp
 *.a
 mkmf.log
 .idea/
+config/exploit.yml
+config/explout.yml.bak
