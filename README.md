@@ -58,6 +58,8 @@ Example using the defaults:
 
     $ exploit "sploit.mydomain.com" "" "" "" "asdlkjhsdfuw1228340asdasf8" "mycoolsoftware-build-28" "nexpose-console-1" "10.0.0.1" "" "" ""
 
+It is possible to use a YAML file to drive the configuration of this module.  An example YAML file is included in config/exploit.yml.example.  Simply copy it to config/exploit.yml and modify it to work with your environment.
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/MetasploitPenTestScript/fork )
