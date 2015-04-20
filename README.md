@@ -5,7 +5,7 @@ This is a ruby gem that basically wraps the msfrpc-client gem.
 It was primarily created to automate workspace creation and automatic import of Nexpose scan data from use in 
 a Jenkins automated CI/CD environment. 
 
-Basically this allows you to attach Metasploit to your Continuous Delivery/Continuous integration pipeline, though it can be used for other purposes.
+Basically this allows you to attach Metasploit to your Continuous Delivery/Continuous Integration pipeline, though it can be used for other purposes.
 
 ## Installation
 
