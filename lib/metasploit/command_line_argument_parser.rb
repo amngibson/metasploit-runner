@@ -5,6 +5,8 @@ class CommandLineArgumentParser
     options = {}
     options['use_ssl'] = false
     options['use_os_filter'] = false
+    options['exploit_speed'] = 5
+    options['limit_sessions'] = false
 
     opt_parser = OptionParser.new do |opts|
       opts.banner = 'Usage: exploit [options]'
@@ -54,6 +56,14 @@ class CommandLineArgumentParser
 
       opts.on('--whitelist-hosts HOSTS', 'IP addresses or CIDR blocks to scan') do |whitelist|
         options['whitelist_hosts'] = whitelist
+      end
+
+      opts.on('--exploit-speed SPEED', 'Exploit speed') do |speed|
+        options['exploit_speed'] = speed
+      end
+
+      opts.on('--limit-sessions', 'Limit sessions') do
+        options['limit_sessions'] = true
       end
     end
 

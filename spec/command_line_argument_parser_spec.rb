@@ -16,6 +16,8 @@ describe 'command_line_argument_parser' do
         '--nexpose-console-name' => 'some-console',
         '--device-ip-to-scan' => '1.2.3.4',
         '--whitelist-hosts' => '1.2.3.0/24',
+        '--exploit-speed' => '200',
+        '--limit-sessions' => nil,
       }
 
       @command_line_argument_parser = CommandLineArgumentParser.parse(hash_to_array(@expected_arguments))
@@ -75,6 +77,26 @@ describe 'command_line_argument_parser' do
 
     it 'should parse --whitelist-hosts' do
       expect(@command_line_argument_parser['whitelist_hosts']).to eq(@expected_arguments['--whitelist-hosts'])
+    end
+
+    it 'should parse --exploit-speed' do
+      expect(@command_line_argument_parser['exploit_speed']).to eq(@expected_arguments['--exploit-speed'])
+    end
+
+    it 'should pick appropriate default when --exploit-speed not present' do
+      @expected_arguments.delete '--exploit-speed'
+      @command_line_argument_parser = CommandLineArgumentParser.parse(hash_to_array(@expected_arguments))
+      expect(@command_line_argument_parser['exploit_speed']).to eq(5)
+    end
+
+    it 'should parse --limit-sessions' do
+      expect(@command_line_argument_parser['limit_sessions']).to eq(true)
+    end
+
+    it 'should pick appropriate default when --limit-sessions not present' do
+      @expected_arguments.delete '--limit-sessions'
+      @command_line_argument_parser = CommandLineArgumentParser.parse(hash_to_array(@expected_arguments))
+      expect(@command_line_argument_parser['limit_sessions']).to eq(false)
     end
   end
 
