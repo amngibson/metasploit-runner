@@ -1,8 +1,14 @@
 language: ruby
+
 rvm:
 - 2.1.2
 - 2.1.5
 - 2.2.0
+
+before_install:
+  - gem update --system 2.4.8
+  - gem --version
+
 deploy:
   provider: rubygems
   api_key:
