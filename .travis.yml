@@ -6,6 +6,7 @@ rvm:
 - 2.2.0
 
 before_install:
+  # TODO: Newer versions of rubygems on Travis CI fail on RSpec (see http://stackoverflow.com/a/33800008/4630536). Remove the forced rubygems version when this is fixed.
   - gem update --system 2.4.8
   - gem --version
 
