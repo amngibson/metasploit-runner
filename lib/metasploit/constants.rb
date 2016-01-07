@@ -24,4 +24,5 @@ module CONSTANTS
   USING_MODULE_FILTER = '[*] Filtering exploits based on your desired modules'
   NO_MODULE_FILTER = '[*] Not filtering any modules'
   NO_REPORT_TYPE_MESSAGE = 'No report type specified - skipping report generation'
+  MAX_RETRY_COUNT = 5
 end
