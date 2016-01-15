@@ -7,8 +7,8 @@ class CommandLineArgumentParser
     options['use_os_filter'] = false
     options['exploit_speed'] = 5
     options['limit_sessions'] = false
-    options['port'] = ""
-    options['uri'] = ""
+    options['port'] = ''
+    options['uri'] = ''
 
     opt_parser = OptionParser.new do |opts|
       opts.banner = 'Usage: exploit [options]'
