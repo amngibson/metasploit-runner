@@ -3,6 +3,7 @@ module CONSTANTS
   DEFAULT_URI = '/api/1.0'
   DEFAULT_SSL = true
   DEFAULT_OS_FILTER = false
+  DEFAULT_SSL_VERSION = 'TLS1'
   RUNNING_IMPORT_STATUS = 'running'
   EXPLOIT_RUNNING_MESSAGE = 'running'
   REQUIRED_TOKEN_MESSAGE = 'PWNED! Token is required'

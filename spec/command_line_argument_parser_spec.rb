@@ -9,6 +9,7 @@ describe 'command_line_argument_parser' do
         '--port' => '1234',
         '--token' => 'testtoken',
         '--use-ssl' => nil,
+        '--ssl-version' => 'TLS1',
         '--use-os-filter' => nil,
         '--module-filter' => 'exploit/blah1,exploit/blah2',
         '--report-type' => 'fisma',
@@ -43,6 +44,16 @@ describe 'command_line_argument_parser' do
       @expected_arguments.delete '--use-ssl'
       @command_line_argument_parser = CommandLineArgumentParser.parse(hash_to_array(@expected_arguments))
       expect(@command_line_argument_parser['use_ssl']).to eq(false)
+    end
+
+    it 'should parse --ssl-version' do
+      expect(@command_line_argument_parser['ssl_version']).to eq(@expected_arguments['--ssl-version'])
+    end
+
+    it 'should pick appropriate default when --ssl-version not present' do
+      @expected_arguments.delete '--ssl-version'
+      @command_line_argument_parser = CommandLineArgumentParser.parse(hash_to_array(@expected_arguments))
+      expect(@command_line_argument_parser['ssl_version']).to eq('TLS1')
     end
 
     it 'should parse --use-os-filter' do
