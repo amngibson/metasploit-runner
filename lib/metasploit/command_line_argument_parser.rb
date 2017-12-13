@@ -4,6 +4,7 @@ class CommandLineArgumentParser
   def self.parse(args)
     options = {}
     options['use_ssl'] = false
+    options['ssl_version'] = 'TLS1'
     options['use_os_filter'] = false
     options['exploit_speed'] = 5
     options['limit_sessions'] = false
@@ -26,6 +27,10 @@ class CommandLineArgumentParser
 
       opts.on('--use-ssl', 'Use SSL when scanning') do
         options['use_ssl'] = true
+      end
+
+      opts.on('--ssl-version SSL-VERSION', 'SSL Version when using SSL') do |ssl_version|
+        options['ssl_version'] = ssl_version
       end
 
       opts.on('--token TOKEN', 'Access token for Metasploit') do |token|
